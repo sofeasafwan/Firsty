@@ -1,0 +1,82 @@
+<html>
+  <div>
+    <form>
+      <ul>
+        <li>
+          <fieldset>
+            <label>
+              Name
+            </label>
+            <input type="text" id="myname">
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <label>
+              Last name
+            </label>
+            <input type="text" id="lastname">
+          </fieldset>
+        </li>
+        <li>
+          <fieldset> 
+            <label>            
+              Fullname
+            </label>
+            <input type="text" id="fullname">
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <label>
+            Age
+            </label>
+            <input type="text" id="myage">
+          </fieldset>
+        </li>
+        <li>
+          <button id="nextbutton" onclick="showStuff()">Next</button>
+        </li>
+     </ul>         
+    </form>                    
+  </div>
+  <script>
+    function showStuff()
+    {
+      var myNameField = document.getElementById("myname");
+      var myNameValue = myNameField.value;
+      var message = "Hello, " + myNameValue + "! Welcome to my website!";
+      alert(message);
+
+      var myAgeField = document.getElementById("myage");
+      var myAgeValue = myAgeField.value;
+
+      if (myAgeValue == 7)
+      {
+        message = "So you're in Y2!";
+      }
+      else if (myAgeValue == 8)
+      {
+        message = "So you're in Y3!";
+      }
+      else if (myAgeValue == 9)
+      {
+        message = "So you're in Y4!";
+      }
+      else if (myAgeValue > 11 && myAgeValue < 18)
+      {
+        message = "So you must be in high school! Awesome!";
+      }
+      else if (myAgeValue > 0  && myAgeValue < 5)
+      {
+        message = "So you're in pre school!";
+      }
+      else 
+      {
+        message = "Hmm, I'm not sure what to say.";
+      }
+
+      alert(message);
+    }
+  </script>
+</html>
